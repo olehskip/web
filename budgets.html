@@ -1,143 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>Budgets Screen</title>
-    <link rel="stylesheet" href="styles/budgets.css">
+	<meta charset="UTF-8">
+	<title>Budgets Screen</title>
+	<link rel="stylesheet" href="styles/budgets.css">
   </head>
-  <body>
-      <div class="budgets-container">
-        <div class="budget-cell">
-          <b class="budget-label">ID:</b> 
-          <i>123213123</i>
-          <br>
-          <b class="budget-label">Type:</b> 
-          <i>Family</i>
-          <br>
-          <b class="budget-label">Money:</b> 
-          <i class="money-amount">12343$</i>
-          <br>
-          <b class="budget-label">Members:</b> 
-          <i>Members: Bla bla bla bla bla</i>
-        </div>
-        <div class="budget-cell">
-          <b class="budget-label">ID:</b> 
-          <i>123213123</i>
-          <br>
-          <b class="budget-label">Type:</b> 
-          <i>Family</i>
-          <br>
-          <b class="budget-label">Money:</b> 
-          <i class="money-amount">12343$</i>
-          <br>
-          <b class="budget-label">Members:</b> 
-          <i>Members: Bla bla bla bla bla</i>
-        </div>
-        <div class="budget-cell">
-          <b class="budget-label">ID:</b> 
-          <i>123213123</i>
-          <br>
-          <b class="budget-label">Type:</b> 
-          <i>Family</i>
-          <br>
-          <b class="budget-label">Money:</b> 
-          <i class="money-amount">12343$</i>
-          <br>
-          <b class="budget-label">Members:</b> 
-          <i>Members: Bla bla bla bla bla</i>
-        </div>
-        <div class="budget-cell">
-          <b class="budget-label">ID:</b> 
-          <i>123213123</i>
-          <br>
-          <b class="budget-label">Type:</b> 
-          <i>Family</i>
-          <br>
-          <b class="budget-label">Money:</b> 
-          <i class="money-amount">12343$</i>
-          <br>
-          <b class="budget-label">Members:</b> 
-          <i>Members: Bla bla bla bla bla</i>
-        </div>
-        <div class="budget-cell">
-          <b class="budget-label">ID:</b> 
-          <i>123213123</i>
-          <br>
-          <b class="budget-label">Type:</b> 
-          <i>Family</i>
-          <br>
-          <b class="budget-label">Money:</b> 
-          <i class="money-amount">12343$</i>
-          <br>
-          <b class="budget-label">Members:</b> 
-          <i>Members: Bla bla bla bla bla</i>
-        </div>
-        <div class="budget-cell">
-          <b class="budget-label">ID:</b> 
-          <i>123213123</i>
-          <br>
-          <b class="budget-label">Type:</b> 
-          <i>Family</i>
-          <br>
-          <b class="budget-label">Money:</b> 
-          <i class="money-amount">12343$</i>
-          <br>
-          <b class="budget-label">Members:</b> 
-          <i>Members: Bla bla bla bla bla</i>
-        </div>
-        <div class="budget-cell">
-          <b class="budget-label">ID:</b> 
-          <i>123213123</i>
-          <br>
-          <b class="budget-label">Type:</b> 
-          <i>Family</i>
-          <br>
-          <b class="budget-label">Money:</b> 
-          <i class="money-amount">12343$</i>
-          <br>
-          <b class="budget-label">Members:</b> 
-          <i>Members: Bla bla bla bla bla</i>
-        </div>
-        <div class="budget-cell">
-          <b class="budget-label">ID:</b> 
-          <i>123213123</i>
-          <br>
-          <b class="budget-label">Type:</b> 
-          <i>Family</i>
-          <br>
-          <b class="budget-label">Money:</b> 
-          <i class="money-amount">12343$</i>
-          <br>
-          <b class="budget-label">Members:</b> 
-          <i>Members: Bla bla bla bla bla</i>
-        </div>
-        <div class="budget-cell">
-          <b class="budget-label">ID:</b> 
-          <i>123213123</i>
-          <br>
-          <b class="budget-label">Type:</b> 
-          <i>Family</i>
-          <br>
-          <b class="budget-label">Money:</b> 
-          <i class="money-amount">12343$</i>
-          <br>
-          <b class="budget-label">Members:</b> 
-          <i>Members: Bla bla bla bla bla</i>
-        </div>
-        <div class="budget-cell">
-          <b class="budget-label">ID:</b> 
-          <i>123213123</i>
-          <br>
-          <b class="budget-label">Type:</b> 
-          <i>Family</i>
-          <br>
-          <b class="budget-label">Money:</b> 
-          <i class="money-amount">12343$</i>
-          <br>
-          <b class="budget-label">Members:</b> 
-          <i>Members: Bla bla bla bla bla</i>
-        </div>
+<body>
+	<div class="header">
+		<div class="company-name">Very cool name</div>
+		<div class="navigation">
+			<a class="budgets" href="budgets.html">Bugdets</a>
+			<a class="profile" href="my_profile.html">Profile</a>
+			<a class="log_out" href="login.html">Log Out</a>
+		</div>
+	</div>
 
-      </div>
+	<div class="budgets-container">
+	  <div class="budgets-container-header">
+		<div class="caption">Your budgets</div>
+		<div class="buttons-container">
+		  <button class="create-budget-button">Create budget</button>
+		  <button class="edit-budget-button">Edit budget</button>
+		  <button class="delete-budget-button">Delete budget</button>
+		</div>
+	  </div>
+
+	  <table class="budgets-table">
+		<thead>
+		  <tr>
+			<th><input type="checkbox"></td>
+			<th scope="col">ID</th>
+			<th scope="col">Type</th>
+			<th scope="col">Money</th>
+			<th scope="col">Members</th>  
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<td><input type="checkbox"></td>
+			<td data-label="ID: " scope="row">1232131234</th>
+			<td data-label="Type: ">Family</td>
+			<td data-label="Money: ">134312$</td>
+			<td data-label="Members: ">ASFdfdsf sdjsdf sdjlf dsf sdf jdslfdsfjdslfdsf</td>
+		  </tr>
+		  <tr>
+			<td><input type="checkbox"></td>
+			<td data-label="ID: " scope="row">1232131234</th>
+			<td data-label="Type: ">Family</td>
+			<td data-label="Money: ">134312$</td>
+			<td data-label="Members: ">ASFdfdsf sdjsdf sdjlf dsf sdf jdslfdsfjdslfdsf</td>
+		  </tr>
+
+		  <tr>
+			<td><input type="checkbox"></td>
+			<td data-label="ID: " scope="row">1232131234</th>
+			<td data-label="Type: ">Family</td>
+			<td data-label="Money: ">134312$</td>
+			<td data-label="Members: ">ASFdfdsf sdjsdf sdjlf dsf sdf jdslfdsfjdslfdsf</td>
+		  </tr>
+		</tbody>
+	  </table>
+	</div>
   </body>
 </html>

@@ -1,92 +1,145 @@
-$bugdet_cell_height: 100px;
-$bugdet_cell_width: 250px;
+@use 'header.scss';
+
+.header {
+	@extend %header;
+}
+
+$cell-border-color: #5d23bb;
+
 .budgets-container {
-    display: grid;
-    grid-gap: 30px;
-    // grid-template-columns: repeat(auto-fit, minmax($bugdet_cell_width, 1fr));
-    grid-template-columns: 100%;
-    grid-auto-rows: auto;
-    height: 100%;
-    width: 100%;
-    // background: rgb(2,0,36);
-    // background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(3,134,203,1) 75%, rgba(0,212,255,1) 100%);
-    // background: linear-gradient(to bottom, #F8F8F8, #ECECEC);
-    font-size: 19px;
-    
+	margin: 100px;
+	margin-top: 20px;
 }
 
-.budget-cell {
-    // border: 2px solid green;
-    // text-align: center;
-    // background-color: #e60a0a;
-    width: auto;
-    height: 100%;
-    box-shadow: 0px 2px 2px grey;
-    background-color: white;
-    color: black;
-    // border: 3px solid #1C6EA4;
-    // border-radius: 0px 0px 10px 10px;
-    // margin-left: 20px;
-    
-    padding-left: 40px;
-    box-sizing: border-box;
-    // source: https://github.com/IanLunn/Hover/blob/master/scss/effects/border-transitions/_underline-from-center.scss
-
-    display: inline-block;
-    vertical-align: middle;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    // -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.15s;
-    transition-property: transform;
-    // border-radius: 10px 10px 10px 10px;
+.budgets-container-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: auto;
+	gap: 30px;
 }
 
-.budget-cell:text {
-    
+.caption {
+	font-size: 35px;
+	font-weight: 700;
+	color: #5d23bb;
 }
 
-.budget-cell:after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 1px;
-    background: #000;
-    transition: width .3s;
-    padding-left: -40px;
+.buttons-container {
+	margin-right: 10px;
 }
 
-// soure: https://stackoverflow.com/questions/28623446/hover-effect-expand-bottom-border
-.budget-cell:hover:after {
-    display: block;
-    width: 100%;
-    // padding-left: -40px;
-    left: 0;
-    padding: 0;
-    margin: 0;
-}
-.budget-cell:hover,
-.budget-cell:focus,
-.budget-cell:active {
-    transform: scale(1.01);
+.buttons-container button {
+	padding: 10px;
+	color: #ffffff;
+	border: none;
+	border-radius: 3px;
+	font-size: 1.2rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	margin: 3px;
 }
 
-.budget-label {
-    float: left;
-    padding-right: 5px;
+.create-budget-button {
+	background-color: #007bff;
 }
 
-.money-amount {
-    color: green;
+.edit-budget-button {
+	background-color: #097969;
+}
+
+.delete-budget-button {
+	background-color: #A52A2A;
+}
+
+.create-budget-button:hover {
+	background-color: #0069d9;
+}
+
+.edit-budget-button:hover {
+	background-color: #075e52;
+}
+
+.delete-budget-button:hover {
+	background-color: #6E260E;
+}
+
+.budgets-table {
+	border-collapse: separate;
+	border-spacing: 0px 20px;
+	width: 100%;
+	table-layout: fixed;
+
+	caption {
+		font-size: 33px;
+	}
+
+	th, td {
+		text-align: left;
+		font-size: 19px;
+		vertical-align:middle;
+		padding: 10px;
+	}
+	thead {
+		color: grey;
+		font-weight: 700;
+	}
+
+	tbody tr {
+		background-color: white;
+		box-shadow: 0 0 4px blue;
+		transition: all .2s ease-in-out;
+	}
+
+	tbody tr:hover {
+		transform: scale(1.003); 
+	}
+
+	th:first-child,td:first-child {
+		width: 2%;
+	}
+	th:last-child,td:last-child {
+		width: 45%;
+	}
+
+	// source: https://codepen.io/AllThingsSmitty/pen/MyqmdM
+	@media screen and (max-width: 1000px) {
+		thead {
+			border: none;
+			clip: rect(0 0 0 0);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute;
+			width: 1px;
+		}
+		
+		td {
+			display: block;
+			width: 95% !important;
+		}
+		
+		td::before {
+			content: attr(data-label);
+			float: left;
+			font-weight: bold;
+			text-transform: uppercase;
+			width: 100%;
+		}
+		
+		td:last-child {
+			border-bottom: 0;
+		}
+	}
 }
 
 body {
-    // background-color: red;
-    background-color: #f5f5f5;
-    margin: 0px;
-    margin-top: 20px;
-    // background: linear-gradient(to bottom, #C1D5E0, #A2C3D3, #83B1C7, #64A0BB, #4A8FAB);
-    // background-repeat: no-repeat;
-    // background-size: cover;
+	background-color: #f5f5f5;
+	margin: 0;
 }
+
+
+
+
