@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Information</title>
+    <link rel="stylesheet" href="styles/budget_info.css" />
+  </head>
+  <body>
+    <div class="header">
+		<div class="company-name">Very cool name</div>
+		<div class="navigation">
+			<a class="budgets" href="budgets.html">Bugdets</a>
+			<a class="profile" href="profile.html">Profile</a>
+			<a class="log_out" href="login.html">Log Out</a>
+		</div>
+	</div>
+    <div class="budget-info-container">
+      <div class="info-header">
+        <h1>Budget Information</h1>
+        <div class="buttons-container">
+          <button class="show-report-button">Show Report</button>
+          <button class="transfer-money-button">Transfer money</button>
+          <button class="delete-button">Delete budget</button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="item">
+          <label for="id">ID:</label>
+          <input type="text" id="id" readonly />
+        </div>
+        <div class="item">
+          <label for="type">Type:</label>
+          <input type="text" id="type" readonly />
+        </div>
+        <div class="item">
+          <label for="money">Money:</label>
+          <input type="text" id="money" readonly />
+        </div>
+        <table class="list">
+          <thead>
+            <tr>
+              <th>User's Name</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td><button class="btn">Delete</button></td>
+            </tr>
+            <tr>
+              <td>Jane Doe</td>
+              <td><button class="btn">Delete</button></td>
+            </tr>
+            <tr>
+              <td>Bob Smith</td>
+              <td><button class="btn">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
