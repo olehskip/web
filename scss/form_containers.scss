@@ -1,7 +1,20 @@
+@use 'colors.scss';
+@use 'buttons.scss';
+@use 'inputs.scss';
+
+%simple-form-container {
+	margin: 0 auto;
+	padding: 50px;
+	background-color: colors.$content-background-color;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	font-family: Arial, sans-serif;
+}
+
 %form-with-image-container {
 	display: flex;
 	height: 100vh;
-	background-color: #f5f5f5;
+	
 	
 	form {
 		display: flex;
@@ -15,13 +28,13 @@
 			min-width: 0px;
 		}
 		padding: 40px;
-		background-color: #ffffff;
+		background-color: colors.$content-background-color;
 		border: none;
 		border-right: 1px solid #ccc;
 	}
 	.right-part {
 		@media (max-width: 700px) {
-		width: 0%;
+			width: 0%;
 		}
 		min-width: 0;
 		width: 70%;
@@ -36,10 +49,13 @@
 		font-weight: 500;
 		margin-bottom: 20px;
 		text-align: center;
+		color: colors.$form-caption-color;
+		font-weight: 700;
+		font-size: 27px;
 	}
 	
 	label {
-		font-size: 1rem;
+		font-size: 20px;
 		font-weight: 400;
 		margin-bottom: 5px;
 	}
@@ -60,7 +76,7 @@
 		width: 100%;
 		margin-bottom: 17px;
 		font-size: 1rem;
-		color: #007bff;
+		color: colors.$azure-button-color;
 		text-decoration: none;
 		transition: all 0.2s ease-in-out;
 	}
@@ -68,21 +84,12 @@
 	.form-link:hover {
 		text-decoration: underline;
 	}
-	
-	.form-submit-button {
-		width: 100%;
-		padding: 10px;
-		background-color: #007bff;
-		color: #ffffff;
-		border: none;
-		border-radius: 3px;
-		font-size: 1.2rem;
-		font-weight: 500;
-		cursor: pointer;
-		transition: all 0.2s ease-in-out;
+
+	button {
+		@extend %simple-button;
 	}
-	
-	.form-submit-button:hover {
-		background-color: #0069d9;
+
+	.form-submit-button {
+		background-color: colors.$green-button-color;
 	}
 }

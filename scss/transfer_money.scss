@@ -1,0 +1,105 @@
+@use 'header.scss';
+@use 'colors.scss';
+@use 'buttons.scss';
+@use 'form_containers.scss';
+
+.header {
+	@extend %header;
+}
+
+$primary-color: #2b2d42;
+$secondary-color: #8d99ae;
+$highlight-color: #ef233c;
+
+body {
+	box-sizing: border-box;
+	margin: 0;
+	background-color: colors.$background-color;
+}
+
+.container {
+	@extend %simple-form-container;
+	max-width: 600px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 2rem;
+	color: colors.$form-caption-color;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group {
+	margin-bottom: 1rem;
+}
+
+label {
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+	color: $primary-color;
+}
+
+.select-wrapper {
+	position: relative;
+	select {
+		background-color: transparent;
+		width: 100%;
+		border: 1px solid #ccc;
+		padding: 10px;
+		font-size: 16px;
+		border-radius: 5px;
+		box-shadow: none;
+		outline: none;
+		transition: all 0.3s ease-in-out;
+		margin-bottom: 10px;
+		&:hover, &:focus {
+			border-color: #999;
+		}
+		
+		&:focus {
+			box-shadow: 0 0 5px #999;
+		}
+	}
+	&::after {
+		content: "\f107";
+		font-family: FontAwesome;
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		transform: translateY(-50%);
+		color: $secondary-color;
+		pointer-events: none;
+	}
+}
+
+.amount-wrapper {
+	position: relative;
+	input[type="number"] {
+		background-color: transparent;
+		width: 100%;
+		border: 1px solid #ccc;
+		padding: 10px;
+		font-size: 16px;
+		border-radius: 5px;
+		box-shadow: none;
+		outline: none;
+		transition: all 0.3s ease-in-out;
+		margin-bottom: 10px;
+		&:hover, &:focus {
+			border-color: #999;
+		}
+		
+		&:focus {
+			box-shadow: 0 0 5px #999;
+		}
+	}
+}
+
+.submit-button {
+	@extend %simple-button;
+	background-color: colors.$green-button-color;
+}

@@ -1,6 +1,8 @@
-for f in `fd '^[a-z_]*.scss' ./styles/`; do
+mkdir -p styles
+for f in `fd . ./scss -e scss`; do
     # remove extension
-    f_without_ext=${f%.*}
-    #echo $f
-    sass $f $f_without_ext.css
+    file_name=${f%.*}
+    # remove path
+    file_name=${file_name##*/}
+    sass $f ./styles/$file_name.css
 done
