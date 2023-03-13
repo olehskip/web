@@ -23,9 +23,9 @@ body {
 		align-items: center;
 		margin-bottom: 20px;
 		
-		h1 {
+		.budget-info {
+			@extend %simple-caption;
 			margin: 0;
-			color: colors.$form-caption-color;
 		}
 		
 		button {

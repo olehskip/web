@@ -1,53 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
+	<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Money Transfer Page</title>
 	<link rel="stylesheet" href="styles/transfer_money.css">
-  </head>
-  <body>
+	</head>
+	<body>
 	<div class="header">
 		<div class="company-name">Very cool name</div>
 		<div class="navigation">
-		  <a class="budgets" href="budgets.html">Bugdets</a>
-		  <a class="profile" href="profile.html">Profile</a>
-		  <a class="log_out" href="login.html">Log Out</a>
+			<a class="budgets" href="budgets.html">Bugdets</a>
+			<a class="profile" href="profile.html">Profile</a>
+			<a class="log_out" href="login.html">Log Out</a>
 		</div>
 	</div>
 	<div class="container">
-	  <h1>Money Transfer</h1>
-	  <form>
+		<div class="form-caption">Money Transfer</div>
+		<form class="transfer-money-form">
 		<div class="form-group">
-		  <label for="from-budget">From Budget</label>
-		  <div class="select-wrapper">
-			<select id="from-budget" name="from-budget">
-			  <option value="budget1">Budget 1</option>
-			  <option value="budget2">Budget 2</option>
-			  <option value="budget3">Budget 3</option>
+			<label for="from-budget">From Budget</label>
+			<select id="from-budget" name="from-budget" class="budget-selector">
+				<option value="budget1">Budget 1</option>
+				<option value="budget2">Budget 2</option>
+				<option value="budget3">Budget 3</option>
 			</select>
-		  </div>
 		</div>
 		<div class="form-group">
-		  <label for="to-budget">To Budget</label>
-		  <div class="select-wrapper">
-			<select id="to-budget" name="to-budget">
-			  <option value="budget1">Budget 1</option>
-			  <option value="budget2">Budget 2</option>
-			  <option value="budget3">Budget 3</option>
+			<label for="to-budget">To Budget</label>
+			<select id="to-budget" name="to-budget" class="budget-selector">
+				<option value="budget1">Budget 1</option>
+				<option value="budget2">Budget 2</option>
+				<option value="budget3">Budget 3</option>
 			</select>
-		  </div>
 		</div>
 		<div class="form-group">
-		  <label for="amount">Amount</label>
-		  <div class="amount-wrapper">
+			<label for="amount">Amount</label>
+			<div class="amount-wrapper">
 			<input type="number" id="amount" name="amount" min="0" step="0.01" placeholder="0.00">
-		  </div>
+			</div>
 		</div>
 		<div class="form-group">
-		  <button type="submit" class="submit-button">Transfer</button>
+			<button type="submit" class="submit-button">Transfer</button>
 		</div>
-	  </form>
+		</form>
 	</div>
-  </body>
+	</body>
 </html>

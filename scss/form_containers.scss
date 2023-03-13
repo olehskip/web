@@ -11,10 +11,17 @@
 	font-family: Arial, sans-serif;
 }
 
+%simple-caption {
+	text-align: center;
+	margin-bottom: 20px;
+	color: colors.$form-caption-color;
+	font-size: 30px;
+	font-weight: 700;
+}
+
 %form-with-image-container {
 	display: flex;
 	height: 100vh;
-	
 	
 	form {
 		display: flex;
@@ -45,13 +52,7 @@
 	}
 	
 	.form-header {
-		font-size: 1.2rem;
-		font-weight: 500;
-		margin-bottom: 20px;
-		text-align: center;
-		color: colors.$form-caption-color;
-		font-weight: 700;
-		font-size: 27px;
+		@extend %simple-caption;
 	}
 	
 	label {
