@@ -1,0 +1,29 @@
+@use 'colors.scss';
+@use 'buttons.scss';
+
+%table-with-actions {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	
+	th {
+		background-color: colors.$blue-color;
+		color: colors.$white-color;
+		padding: 10px;
+		text-align: center;
+	}
+	
+	td {
+		padding: 10px;
+		border-bottom: 1px solid #ccc;
+		text-align: center;
+		
+		&:last-child {
+			button {
+				@extend %simple-button;
+				padding: 5px 10px;
+			}
+		}
+	}
+
+}

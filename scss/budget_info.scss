@@ -3,6 +3,7 @@
 @use 'buttons.scss';
 @use 'form_containers.scss';
 @use 'inputs.scss';
+@use 'tables.scss';
 
 .header {
 	@extend %header;
@@ -43,53 +44,30 @@ body {
 		.delete-button {
 			background-color: colors.$red-button-color;
 		}
+	}	
+}
+
+.item {
+	display: flex;
+	align-items: baseline;
+	margin-bottom: 10px;
+	
+	label {
+		flex: 1;
+		font-weight: bold;
+		margin-right: 10px;
 	}
 	
-	.content {
-		padding: 20px;
-		
-		.item {
-			display: flex;
-			align-items: baseline;
-			margin-bottom: 10px;
-			
-			label {
-				flex: 1;
-				font-weight: bold;
-				margin-right: 10px;
-			}
-			
-			input {
-				@extend %simple-input;
-				flex: 2;
-			}
-		}
-		
-		.list {
-			width: 100%;
-			border-collapse: collapse;
-			margin-top: 20px;
-			
-			th {
-				background-color: colors.$blue-color;
-				color: #fff;
-				padding: 10px;
-				text-align: center;
-			}
-			
-			td {
-				padding: 10px;
-				border-bottom: 1px solid #ccc;
-				text-align: center;
-				
-				&:last-child {
-					button {
-						@extend %simple-button;
-						background-color: colors.$red-button-color;
-						padding: 5px 10px;
-					}
-				}
-			}
-		}
+	input {
+		@extend %simple-input;
+		flex: 2;
 	}
+}
+
+.list {
+	@extend %table-with-actions;
+}
+
+.delete-button {
+	background-color: colors.$red-button-color;
 }

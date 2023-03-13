@@ -66,26 +66,24 @@ body {
 	}
 }
 
-.amount-wrapper {
-	position: relative;
-	input[type="number"] {
-		background-color: transparent;
-		width: 100%;
-		border: 1px solid #ccc;
-		padding: 10px;
-		font-size: 16px;
-		border-radius: 5px;
-		box-shadow: none;
-		outline: none;
-		transition: all 0.3s ease-in-out;
-		margin-bottom: 10px;
-		&:hover, &:focus {
-			border-color: #999;
-		}
-		
-		&:focus {
-			box-shadow: 0 0 5px #999;
-		}
+.money-amount-selector {
+	background-color: transparent;
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	box-shadow: none;
+	outline: none;
+	transition: all 0.3s ease-in-out;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	&:hover, &:focus {
+		border-color: #999;
+	}
+	
+	&:focus {
+		box-shadow: 0 0 5px #999;
 	}
 }
 
