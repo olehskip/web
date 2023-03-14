@@ -1,8 +1,8 @@
-@use 'colors.scss';
-@use 'header.scss';
-@use 'buttons.scss';
-@use 'form_containers.scss';
-@use 'inputs.scss';
+@use "colors.scss";
+@use "header.scss";
+@use "buttons.scss";
+@use "form_containers.scss";
+@use "inputs.scss";
 
 .header {
 	@extend %header;

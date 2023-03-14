@@ -1,7 +1,7 @@
-@use 'header.scss';
-@use 'colors.scss';
-@use 'buttons.scss';
-@use 'form_containers.scss';
+@use "header.scss";
+@use "colors.scss";
+@use "buttons.scss";
+@use "form_containers.scss";
 
 .header {
 	@extend %header;
@@ -39,7 +39,7 @@ body {
 .budget-selector {
 	background-color: transparent;
 	width: 100%;
-	border: 1px solid #ccc;
+	border: 1px solid colors.$gray-color;
 	padding: 10px;
 	font-size: 16px;
 	border-radius: 5px;
@@ -48,11 +48,11 @@ body {
 	transition: all 0.3s ease-in-out;
 	margin-bottom: 10px;
 	&:hover, &:focus {
-		border-color: #999;
+		border-color: colors.$gray-color;
 	}
 	
 	&:focus {
-		box-shadow: 0 0 5px #999;
+		box-shadow: 0 0 5px colors.$gray-color;
 	}
 
 	&::after {
@@ -69,7 +69,7 @@ body {
 .money-amount-selector {
 	background-color: transparent;
 	width: 100%;
-	border: 1px solid #ccc;
+	border: 1px solid colors.$gray-color;
 	padding: 10px;
 	font-size: 16px;
 	border-radius: 5px;
@@ -79,11 +79,11 @@ body {
 	margin-bottom: 10px;
 	box-sizing: border-box;
 	&:hover, &:focus {
-		border-color: #999;
+		border-color: colors.$gray-color;
 	}
 	
 	&:focus {
-		box-shadow: 0 0 5px #999;
+		box-shadow: 0 0 5px colors.$gray-color;
 	}
 }
 

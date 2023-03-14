@@ -1,5 +1,7 @@
+@use "colors.scss";
+
 %simple-input {
-	border: 1px solid #ccc;
+	border: 1px solid colors.$gray-color;
 	padding: 10px;
 	font-size: 16px;
 	border-radius: 5px;
@@ -9,18 +11,18 @@
 	margin-bottom: 10px;
 	
 	&:hover, &:focus {
-		border-color: #999;
+		border-color: colors.$gray-color;
 	}
 	
 	&:focus {
-		box-shadow: 0 0 5px #999;
+		box-shadow: 0 0 5px colors.$gray-color;
 	}
 	
 	&::placeholder {
-		color: #ccc;
+		color: colors.$gray-color;
 	}
 	
 	&.error {
-		border-color: #f00;
+		border-color: colors.$red-color;
 	} 
 }

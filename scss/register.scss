@@ -1,13 +1,13 @@
-@use 'form_containers.scss';
+@use "form_containers.scss";
 
 body {
-  margin: 0;
+	margin: 0;
 }
 
 .register-container {
-  @extend %form-with-image-container;
+	@extend %form-with-image-container;
 }
 
 .right-part {
-  background-image: url("../assets/register_background.jpg");
+	background-image: url("../assets/register_background.jpg");
 }

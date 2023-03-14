@@ -1,6 +1,6 @@
-@use 'colors.scss';
-@use 'buttons.scss';
-@use 'inputs.scss';
+@use "colors.scss";
+@use "buttons.scss";
+@use "inputs.scss";
 
 %simple-form-container {
 	margin: 0 auto;
@@ -32,12 +32,12 @@
 		min-width: 300px;
 		@media (max-width: 700px) {
 			width: 100%;
-			min-width: 0px;
+			min-width: 0;
 		}
 		padding: 40px;
 		background-color: colors.$content-background-color;
 		border: none;
-		border-right: 1px solid #ccc;
+		border-right: 1px solid colors.$white-color;
 	}
 	.right-part {
 		@media (max-width: 700px) {
@@ -66,7 +66,7 @@
 		padding: 8px;
 		margin-bottom: 20px;
 		font-size: 1rem;
-		border: 1px solid #ccc;
+		border: 1px solid colors.$white-color;
 		border-radius: 3px;
 	}
 	

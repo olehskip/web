@@ -1,5 +1,5 @@
-@use 'colors.scss';
-@use 'buttons.scss';
+@use "colors.scss";
+@use "buttons.scss";
 
 %table-with-actions {
 	width: 100%;
@@ -15,7 +15,7 @@
 	
 	td {
 		padding: 10px;
-		border-bottom: 1px solid #ccc;
+		border-bottom: 1px solid colors.$white-color;
 		text-align: center;
 		
 		&:last-child {
@@ -29,7 +29,7 @@
 
 %table-seperated {
 	border-collapse: separate;
-	border-spacing: 0px 20px;
+	border-spacing: 0 20px;
 	width: 100%;
 	table-layout: fixed;
 
