@@ -14,19 +14,17 @@ body {
 	background-color: colors.$background-color;
 }
 
-.budget-info-container {
+.report-info-container {
 	@extend %simple-form-container;
 	max-width: 800px;
 	
 	.info-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 		margin-bottom: 20px;
 		
-		.budget-info {
+		.report-info {
 			@extend %simple-caption;
 			margin: 0;
+			align-self: center;
 		}
 		
 		button {
@@ -64,14 +62,10 @@ body {
 	}
 }
 
-.list {
-	@extend %table-with-actions;
-}
 
 .delete-button {
 	background-color: colors.$red-button-color;
 }
-
 
 .new-member-container {
 	width: 100%;
@@ -101,4 +95,8 @@ body {
 	@extend %simple-input;
 	box-sizing: border-box;
 	width: 100%;
+}
+
+.report-table {
+	@extend %table-seperated;
 }
