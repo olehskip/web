@@ -122,6 +122,9 @@ body {
 .profile-container .buttons-container .submit-button {
   background-color: #4CAF50;
 }
+.profile-container .buttons-container .logout-button {
+  background-color: #097969;
+}
 .profile-container .buttons-container .discard-button {
   background-color: #e74c3c;
 }
